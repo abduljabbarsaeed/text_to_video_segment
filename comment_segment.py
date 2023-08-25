@@ -7,6 +7,11 @@ from pydub.silence import split_on_silence
 import sys
 import os
 
+# check commandline arguments.
+if(len(sys.argv) < 3):
+    print("usage: python comment_segment.py <video file path> <text/comment to match in the video>")
+    quit()
+
 # get video file path from command line.
 video_filepath = sys.argv[1]
 
